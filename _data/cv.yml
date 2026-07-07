@@ -1,0 +1,74 @@
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Haitian Zheng
+    - name: Position
+      value: Research Scientist 2, Adobe Research
+    - name: Location
+      value: San Jose, CA, USA
+    - name: Email
+      value: zheng.ht.ustc@gmail.com
+
+- title: Education
+  type: time_table
+  contents:
+    - title: Ph.D. in Computer Science
+      institution: University of Rochester, Rochester, NY, USA
+      year: 2018 - 2023
+      description:
+        - "Advisor: Prof. Jiebo Luo"
+    - title: M.S. in Computer Science
+      institution: University of Rochester, Rochester, NY, USA
+      year: 2018 - 2020
+    - title: M.S. in Electronics and Communication Engineering
+      institution: University of Science and Technology of China, Hefei, China
+      year: 2013 - 2016
+      description:
+        - "Advisor: Prof. Lu Fang"
+    - title: B.S. in Electronic Information Engineering
+      institution: University of Science and Technology of China, Hefei, China
+      year: 2009 - 2013
+
+- title: Experience
+  type: time_table
+  contents:
+    - title: Research Scientist 2
+      institution: Adobe Research, San Jose, CA, USA
+      year: 2025 - now
+    - title: Research Scientist
+      institution: Adobe Research, San Jose, CA, USA
+      year: 2023 - 2025
+    - title: Ph.D. Researcher
+      institution: University of Rochester, Rochester, NY, USA
+      year: 2018 - 2023
+    - title: Research Intern
+      institution: Adobe Inc., San Jose, CA, USA
+      year: Summer 2022
+    - title: Research Intern
+      institution: Adobe Inc., San Jose, CA, USA
+      year: Summer 2021
+    - title: Research Intern
+      institution: Adobe Inc., San Jose, CA, USA
+      year: Summer 2020
+    - title: Visiting Student
+      institution: Tsinghua University, Beijing, China
+      year: 2015 - 2016
+    - title: Visiting Student
+      institution: Singapore University of Technology and Design, Singapore
+      year: 2013 - 2014
+
+- title: Academic Service
+  type: list
+  contents:
+    - <b>Outstanding Reviewer</b>, CVPR 2022.
+    - "<b>Conference reviewer:</b> CVPR 2026, ICCV 2025, CVPR 2025, ECCV 2024, ICCV 2023, CVPR 2023, ICLR 2022, AAAI 2022, ECCV 2022, CVPR 2022, WACV 2022, ACM MM 2021."
+    - "<b>Journal reviewer:</b> IEEE TPAMI, IEEE TIP, IEEE TMM, IEEE TCSVT, IEEE J-STSP."
+
+- title: Research Interests
+  type: nested_list
+  contents:
+    - title: Computer Vision and Graphics
+      items:
+        - Image generation, editing, enhancement, and restoration
+        - Generative models for computer-aided digital art creation

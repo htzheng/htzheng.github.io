@@ -1,0 +1,387 @@
+---
+---
+
+@inproceedings{yu2025realuhr,
+  abbr={AAAI},
+  bibtex_show={true},
+  selected={true},
+  title={RealUHR: Harnessing Patch-Cascade Flows for Photorealistic Ultra-High-Resolution Synthesis},
+  author={Y. Yu and H. Zheng and Z. Lin and C. Barnes and Y. Zhou and J. Luo},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)},
+  year={2025},
+  html={https://ojs.aaai.org/index.php/AAAI/article/view/38211},
+  pdf={https://ojs.aaai.org/index.php/AAAI/article/download/38211/42173},
+  preview={realuhr.jpg},
+  abstract={Ultra-high-resolution (UHR) text-to-image synthesis faces significant hurdles, including immense computational costs and a scarcity of training data. To address these, we introduce RealUHR, an efficient and scalable framework for generating photorealistic 4K images. At its core, RealUHR employs a Patch-Cascade Flow Matching pipeline that ensures global coherence without costly patch fusion by initiating generation from a semantically meaningful structure. This enables highly efficient, few-step inference for independent patches. Our key contribution is Guidance-Consistent Adaptation (GCA), a novel two-stage strategy to resolve the fundamental objective mismatch in guidance-distilled models. GCA allows powerful backbones like FLUX to be effectively adapted for patch-aware UHR synthesis. The framework's detail-rendering capabilities are further enhanced by a non-uniform time schedule. Experiments show that RealUHR establishes superior performance in both quality and efficiency, and excels in zero-shot applications such as creative up-sampling and generative artifact suppression.}
+}
+
+@inproceedings{zheng2025pixperfect,
+  abbr={NeurIPS},
+  bibtex_show={true},
+  selected={true},
+  title={PixPerfect: Seamless Latent Diffusion Local Editing with Discriminative Pixel-Space Refinement},
+  author={H. Zheng and Y. Yao and Y. Yu and Y. Zhou and Z. Lin and J. Luo},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+  year={2025},
+  arxiv={2512.03247},
+  annotation={H. Zheng and Y. Yao contributed equally.},
+  abstract={Latent Diffusion Models (LDMs) have markedly advanced the quality of image inpainting and local editing. However, the inherent latent compression often introduces pixel-level inconsistencies, such as chromatic shifts, texture mismatches, and visible seams along editing boundaries. Existing remedies, including background-conditioned latent decoding and pixel-space harmonization, usually fail to fully eliminate these artifacts in practice and do not generalize well across different latent representations or tasks. We introduce PixPerfect, a pixel-level refinement framework that delivers seamless, high-fidelity local edits across diverse LDM architectures and tasks. PixPerfect leverages a differentiable discriminative pixel space that amplifies and suppresses subtle color and texture discrepancies, a comprehensive artifact simulation pipeline that exposes the refiner to realistic local editing artifacts during training, and a direct pixel-space refinement scheme that ensures broad applicability across diverse latent representations and tasks. Extensive experiments on inpainting, object removal, and insertion benchmarks demonstrate that PixPerfect substantially enhances perceptual fidelity and downstream editing performance.}
+}
+
+@inproceedings{yu2025omnipaint,
+  abbr={ICCV},
+  bibtex_show={true},
+  selected={true},
+  title={OmniPaint: Mastering Object-Oriented Editing via Disentangled Insertion-Removal Inpainting},
+  author={Y. Yu and Z. Zeng and H. Zheng and J. Luo},
+  booktitle={IEEE/CVF International Conference on Computer Vision (ICCV)},
+  year={2025},
+  arxiv={2503.08677},
+  website={https://yeates.github.io/OmniPaint-Page/},
+  preview={omnipaint.jpg},
+  abstract={Diffusion-based generative models have revolutionized object-oriented image editing, yet their deployment in realistic object removal and insertion remains hampered by challenges such as the intricate interplay of physical effects and insufficient paired training data. In this work, we introduce OmniPaint, a unified framework that re-conceptualizes object removal and insertion as interdependent processes rather than isolated tasks. Leveraging a pre-trained diffusion prior along with a progressive training pipeline comprising initial paired sample optimization and subsequent large-scale unpaired refinement via CycleFlow, OmniPaint achieves precise foreground elimination and seamless object insertion while faithfully preserving scene geometry and intrinsic properties. Furthermore, our novel CFD metric offers a robust, reference-free evaluation of context consistency and object hallucination, establishing a new benchmark for high-fidelity image editing.}
+}
+
+@inproceedings{ding2025dollar,
+  abbr={ICCV},
+  bibtex_show={true},
+  title={DOLLAR: Few-Step Video Generation via Distillation and Latent Reward Optimization},
+  author={Z. Ding and C. Jin and D. Liu and H. Zheng and K. Singh and Q. Zhang and Y. Kang and Z. Lin and Y. Liu},
+  booktitle={IEEE/CVF International Conference on Computer Vision (ICCV)},
+  year={2025},
+  arxiv={2412.15689},
+  preview={dollar.jpg},
+  abstract={Diffusion probabilistic models have shown significant progress in video generation; however, their computational efficiency is limited by the large number of sampling steps required. Reducing sampling steps often compromises video quality or generation diversity. In this work, we introduce a distillation method that combines variational score distillation and consistency distillation to achieve few-step video generation, maintaining both high quality and diversity. We also propose a latent reward model fine-tuning approach to further enhance video generation performance according to any specified reward metric. This approach reduces memory usage and does not require the reward to be differentiable. Our method demonstrates state-of-the-art performance in few-step generation for 10-second videos (128 frames at 12 FPS). The distilled student model achieves a score of 82.57 on VBench, surpassing the teacher model as well as baseline models Gen-3, T2V-Turbo, and Kling. One-step distillation accelerates the teacher model's diffusion sampling by up to 278.6 times, enabling near real-time generation.}
+}
+
+@inproceedings{xie2025turbofill,
+  abbr={CVPR},
+  bibtex_show={true},
+  title={TurboFill: Adapting Few-step Text-to-image Model for Fast Image Inpainting},
+  author={L. Xie and D. Pakhomov and Z. Wang and Z. Wu and Z. Chen and Y. Zhou and H. Zheng and Z. Zhang and Z. Lin and J. Zhou and C. Dong},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages={7613--7622},
+  year={2025},
+  arxiv={2504.00996},
+  website={https://liangbinxie.github.io/projects/TurboFill/},
+  preview={turbofill.jpg},
+  abstract={This paper introduces TurboFill, a fast image inpainting model that enhances a few-step text-to-image diffusion model with an inpainting adapter for high-quality and efficient inpainting. While standard diffusion models generate high-quality results, they incur high computational costs. We overcome this by training an inpainting adapter on a few-step distilled text-to-image model, DMD2, using a novel 3-step adversarial training scheme to ensure realistic, structurally consistent, and visually harmonious inpainted regions. To evaluate TurboFill, we propose two benchmarks: DilationBench, which tests performance across mask sizes, and HumanBench, based on human feedback for complex prompts. Experiments show that TurboFill outperforms both multi-step BrushNet and few-step inpainting methods, setting a new benchmark for high-performance inpainting tasks.}
+}
+
+@inproceedings{wang2025metashadow,
+  abbr={CVPR},
+  bibtex_show={true},
+  selected={true},
+  title={MetaShadow: Object-Centered Shadow Detection, Removal, and Synthesis},
+  author={T. Wang and J. Zhang and H. Zheng and Z. Ding and S. Cohen and Z. Lin and W. Xiong and C.-W. Fu and L. Figueroa and S. Y. Kim},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2025},
+  arxiv={2412.02635},
+  preview={metashadow.jpg},
+  abstract={Shadows are often under-considered or even ignored in image editing applications, limiting the realism of the edited results. In this paper, we introduce MetaShadow, a three-in-one versatile framework that enables detection, removal, and controllable synthesis of shadows in natural images in an object-centered fashion. MetaShadow combines the strengths of two cooperative components: Shadow Analyzer, for object-centered shadow detection and removal, and Shadow Synthesizer, for reference-based controllable shadow synthesis. Notably, we optimize the learning of the intermediate features from Shadow Analyzer to guide Shadow Synthesizer to generate more realistic shadows that blend seamlessly with the scene. Extensive evaluations on multiple shadow benchmark datasets show significant improvements of MetaShadow over the existing state-of-the-art methods on object-centered shadow detection, removal, and synthesis.}
+}
+
+@inproceedings{liu2024deocclusion,
+  abbr={SIGGRAPH},
+  bibtex_show={true},
+  title={Object-level Scene Deocclusion},
+  author={Z. Liu and Q. Liu and C. Chang and J. Zhang and D. Pakhomov and H. Zheng and Z. Lin and D. Cohen-Or and C. Fu},
+  booktitle={ACM SIGGRAPH 2024 Conference Papers},
+  year={2024},
+  arxiv={2406.07706},
+  website={https://liuzhengzhe.github.io/Deocclude-Any-Object.github.io/},
+  preview={deocclusion.jpg},
+  abstract={Deoccluding the hidden portions of objects in a scene is a formidable task, particularly when addressing real-world scenes. In this paper, we present a new self-supervised PArallel visible-to-COmplete diffusion framework, named PACO, a foundation model for object-level scene deocclusion. Leveraging the rich prior of pre-trained models, we first design the parallel variational autoencoder, which produces a full-view feature map that simultaneously encodes multiple complete objects, and the visible-to-complete latent generator, which learns to implicitly predict the full-view feature map from partial-view feature map and text prompts extracted from the incomplete objects in the input image. To train PACO, we create a large-scale dataset with 500k samples to enable self-supervised learning, avoiding tedious annotations of the amodal masks and occluded regions. At inference, we devise a layer-wise deocclusion strategy to improve efficiency while maintaining the deocclusion quality. Extensive experiments on COCOA and various real-world scenes demonstrate the superior capability of PACO for scene deocclusion, surpassing the state of the arts by a large margin.}
+}
+
+@article{zheng2024structure,
+  abbr={TPAMI},
+  bibtex_show={true},
+  selected={true},
+  title={Structure-Guided Image Inpainting with Image-level and Object-level Semantic Discriminators},
+  author={H. Zheng and Z. Lin and J. Lu and S. Cohen and E. Shechtman and J. Zhang and N. Xu and S. Amirghodsi and J. Luo},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},
+  year={2024},
+  arxiv={2212.06310},
+  abstract={Structure-guided image completion aims to inpaint a local region of an image according to an input guidance map from users. While such a task enables many practical applications for interactive editing, existing methods often struggle to hallucinate realistic object instances in complex natural scenes. Such a limitation is partially due to the lack of semantic-level constraints inside the hole region as well as the lack of a mechanism to enforce realistic object generation. In this work, we propose a learning paradigm that consists of semantic discriminators and object-level discriminators for improving the generation of complex semantics and objects. Specifically, the semantic discriminators leverage pretrained visual features to improve the realism of the generated visual concepts. Moreover, the object-level discriminators take aligned instances as inputs to enforce the realism of individual objects. Our proposed scheme significantly improves the generation quality and achieves state-of-the-art results on various tasks, including segmentation-guided completion, edge-guided manipulation and panoptically-guided manipulation on Places2 datasets.}
+}
+
+@inproceedings{zheng2022cmgan,
+  abbr={ECCV},
+  bibtex_show={true},
+  selected={true},
+  title={Image Inpainting with Cascaded Modulation GAN and Object-Aware Training},
+  author={H. Zheng and Z. Lin and J. Lu and S. Cohen and E. Shechtman and C. Barnes and J. Zhang and N. Xu and S. Amirghodsi and J. Luo},
+  booktitle={European Conference on Computer Vision (ECCV)},
+  pages={277--296},
+  year={2022},
+  arxiv={2203.11947},
+  code={https://github.com/htzheng/CM-GAN-Inpainting},
+  preview={cmgan.jpg},
+  abstract={Recent image inpainting methods have made great progress but often struggle to generate plausible image structures when dealing with large holes in complex images. This is partially due to the lack of effective network structures that can capture both the long-range dependency and high-level semantics of an image. We propose cascaded modulation GAN (CM-GAN), a new network design consisting of an encoder with Fourier convolution blocks that extract multi-scale feature representations from the input image with holes and a dual-stream decoder with a novel cascaded global-spatial modulation block at each scale level. In each decoder block, global modulation is first applied to perform coarse and semantic-aware structure synthesis, followed by spatial modulation to further adjust the feature map in a spatially adaptive fashion. In addition, we design an object-aware training scheme to prevent the network from hallucinating new objects inside holes, fulfilling the needs of object removal tasks in real-world scenarios.}
+}
+
+@article{zheng2022semantic,
+  abbr={TPAMI},
+  bibtex_show={true},
+  title={Semantic Layout Manipulation with High-Resolution Sparse Attention},
+  author={H. Zheng and Z. Lin and J. Lu and S. Cohen and J. Zhang and N. Xu and J. Luo},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},
+  year={2022},
+  arxiv={2012.07288},
+  preview={semlayout.jpg},
+  abstract={We tackle the problem of semantic image layout manipulation, which aims to manipulate an input image by editing its semantic label map. A core problem of this task is how to transfer visual details from the input images to the new semantic layout while making the resulting image visually realistic. Recent work on learning cross-domain correspondence has shown promising results for global layout transfer with dense attention-based warping. However, this method tends to lose texture details due to the resolution limitation and the lack of smoothness constraint of correspondence. To adapt this paradigm for the layout manipulation task, we propose a high-resolution sparse attention module that effectively transfers visual details to new layouts at a resolution up to 512x512. To further improve visual quality, we introduce a novel generator architecture consisting of a semantic encoder and a two-stage decoder for coarse-to-fine synthesis.}
+}
+
+@inproceedings{shi2022spaceedit,
+  abbr={CVPR},
+  bibtex_show={true},
+  title={SpaceEdit: Learning a Unified Editing Space for Open-Domain Image Color Editing},
+  author={J. Shi and N. Xu and H. Zheng and A. Smith and J. Luo and C. Xu},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages={19730--19739},
+  year={2022},
+  arxiv={2112.00180},
+  preview={spaceedit.jpg},
+  abstract={Recently, large pretrained models (e.g., BERT, StyleGAN, CLIP) have shown great knowledge transfer and generalization capability on various downstream tasks within their domains. Inspired by these efforts, in this paper we propose a unified model for open-domain image editing focusing on color and tone adjustment of open-domain images while keeping their original content and structure. Our model learns a unified editing space that is more semantic, intuitive, and easy to manipulate than the operation space (e.g., contrast, brightness, color curve) used in many existing photo editing softwares. Our model belongs to the image-to-image translation framework which consists of an image encoder and decoder, and is trained on pairs of before- and after-images to produce multimodal outputs.}
+}
+
+@inproceedings{zhao2022manet,
+  abbr={ICIP},
+  bibtex_show={true},
+  title={MANet: Improving Video Denoising with a Multi-Alignment Network},
+  author={Y. Zhao and H. Zheng and Z. Wang and J. Luo and E. Y. Lam},
+  booktitle={IEEE International Conference on Image Processing (ICIP)},
+  year={2022},
+  arxiv={2202.09704},
+  code={https://github.com/IndigoPurple/MANet},
+  preview={manet.jpg},
+  abstract={In video denoising, the adjacent frames often provide very useful information, but accurate alignment is needed before such information can be harnessed. In this work, we present a multi-alignment network, which generates multiple flow proposals followed by attention-based averaging. It serves to mimic the non-local mechanism, suppressing noise by averaging multiple observations. Our approach can be applied to various state-of-the-art models that are based on flow estimation. Experiments on a large-scale video dataset demonstrate that our method improves the denoising baseline model by 0.2dB, and further reduces the parameters by 47% with model distillation.}
+}
+
+@inproceedings{zhu2022noisylabels,
+  abbr={ICPR},
+  bibtex_show={true},
+  title={Learning to Aggregate and Refine Noisy Labels for Visual Sentiment Analysis},
+  author={W. Zhu and Z. Zheng and H. Zheng and H. Lyu and J. Luo},
+  booktitle={International Conference on Pattern Recognition (ICPR)},
+  pages={571--577},
+  year={2022},
+  arxiv={2109.07509},
+  abstract={Visual sentiment analysis has received increasing attention in recent years. However, the dataset's quality is a concern because the sentiment labels are crowd-sourcing, subjective, and prone to mistakes, and poses a severe threat to the data-driven models, especially the deep neural networks. The deep models would generalize poorly on the testing cases when trained to over-fit the training samples with noisy sentiment labels. Inspired by the recent progress on learning with noisy labels, we propose a robust learning method to perform robust visual sentiment analysis. Our method relies on external memory to aggregate and filter noisy labels during training. The memory is composed of the prototypes with corresponding labels, which can be updated online.}
+}
+
+@inproceedings{zheng2021fashion,
+  abbr={Big Data},
+  bibtex_show={true},
+  title={Personalized Fashion Recommendation from Personal Social Media Data: An Item-to-Set Metric Learning Approach},
+  author={H. Zheng and K. Wu and J. Park and W. Zhu and J. Luo},
+  booktitle={IEEE International Conference on Big Data (Big Data)},
+  pages={5014--5023},
+  year={2021},
+  arxiv={2005.12439},
+  code={https://github.com/htzheng/item-to-set-metric-learning},
+  preview={fashion.jpg},
+  abstract={With the growth of online shopping for fashion products, accurate fashion recommendation has become a critical problem. Meanwhile, social networks provide an open and new data source for personalized fashion analysis. In this work, we study the problem of personalized fashion recommendation from social media data, i.e. recommending new outfits to social media users that fit their fashion preferences. To this end, we present an item-to-set metric learning framework that learns to compute the similarity between a set of historical fashion items of a user to a new fashion item. To extract features from multi-modal street-view fashion items, we propose an embedding module that performs multi-modality feature extraction and cross-modality gated fusion.}
+}
+
+@inproceedings{zhu2021biasinvariant,
+  abbr={ICCV},
+  bibtex_show={true},
+  title={Learning Bias-Invariant Representation by Cross-Sample Mutual Information Minimization},
+  author={W. Zhu and H. Zheng and H. Liao and W. Li and J. Luo},
+  booktitle={IEEE/CVF International Conference on Computer Vision (ICCV)},
+  pages={15002--15012},
+  year={2021},
+  arxiv={2108.05449},
+  preview={biasinvariant.jpg},
+  abstract={Deep learning algorithms mine knowledge from the training data and thus would likely inherit the dataset's bias information. As a result, the obtained model would generalize poorly and even mislead the decision process in real-life applications. We propose to remove the bias information misused by the target task with a cross-sample adversarial debiasing (CSAD) method. CSAD explicitly extracts target and bias features disentangled from the latent representation generated by a feature extractor and then learns to discover and remove the correlation between the target and bias features. The correlation measurement plays a critical role in adversarial debiasing and is conducted by a cross-sample neural mutual information estimator.}
+}
+
+@inproceedings{zheng2020exampleguided,
+  abbr={ECCV},
+  bibtex_show={true},
+  title={Example-Guided Image Synthesis using Masked Spatial-Channel Attention and Self-Supervision},
+  author={H. Zheng and H. Liao and L. Chen and W. Xiong and J. Luo},
+  booktitle={European Conference on Computer Vision (ECCV)},
+  pages={422--439},
+  year={2020},
+  arxiv={2004.10024},
+  code={https://github.com/htzheng/ECCV2020-Example-Guided-Image-Synthesis-across-Arbitrary-Scenes},
+  abstract={Example-guided image synthesis has recently been attempted to synthesize an image from a semantic label map and an exemplary image. In the task, the additional exemplar image provides the style guidance that controls the appearance of the synthesized output. Despite the controllability advantage, the existing models are designed on datasets with specific and roughly aligned objects. In this paper, we tackle a more challenging and general task, where the exemplar is an arbitrary scene image that is semantically different from the given label map. To this end, we first propose a Masked Spatial-Channel Attention (MSCA) module which models the correspondence between two arbitrary scenes via efficient decoupled attention. Next, we propose an end-to-end network for joint global and local feature alignment and synthesis.}
+}
+
+@article{zheng2020poseflow,
+  abbr={TIP},
+  bibtex_show={true},
+  title={Pose Flow Learning from Person Images for Pose Guided Synthesis},
+  author={H. Zheng and L. Chen and C. Xu and J. Luo},
+  journal={IEEE Transactions on Image Processing (TIP)},
+  volume={30},
+  pages={1898--1909},
+  year={2020},
+  arxiv={1909.13819},
+  code={https://github.com/htzheng/TIP2020-Pose-Flow-Learning-for-Pose-Guided-Synthesis},
+  preview={poseflow.jpg},
+  abstract={Pose guided synthesis aims to generate a new image in an arbitrary target pose while preserving the appearance details from the source image. Existing approaches rely on either hard-coded spatial transformations or 3D body modeling. They often overlook complex non-rigid pose deformation or unmatched occluded regions, thus fail to effectively preserve appearance information. In this paper, we propose an unsupervised pose flow learning scheme that learns to transfer the appearance details from the source image. Based on such learned pose flow, we proposed GarmentNet and SynthesisNet, both of which use multi-scale feature-domain alignment for coarse-to-fine synthesis.}
+}
+
+@article{tan2020crossnetpp,
+  abbr={TPAMI},
+  bibtex_show={true},
+  title={CrossNet++: Cross-scale Large-parallax Warping for Reference-based Super-resolution},
+  author={Y. Tan and H. Zheng and Y. Zhu and L. Fang},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},
+  volume={43},
+  number={12},
+  pages={4291--4305},
+  year={2020},
+  html={https://www.semanticscholar.org/paper/CrossNet%2B%2B%3A-Cross-Scale-Large-Parallax-Warping-Tan-Zheng/3bb3b4773159acfb2fa56c4899b08fc4a3dc02b6},
+  annotation={Y. Tan and H. Zheng contributed equally.}
+}
+
+@inproceedings{yang2020adversarial,
+  abbr={ICPR},
+  bibtex_show={true},
+  title={Cost-Effective Adversarial Attacks against Scene Text Recognition},
+  author={M. Yang and H. Zheng and X. Bai and J. Luo},
+  booktitle={International Conference on Pattern Recognition (ICPR)},
+  pages={2368--2374},
+  year={2020},
+  html={https://ieeexplore.ieee.org/document/9412914/}
+}
+
+@inproceedings{chen2020sentiment,
+  abbr={ACM MM},
+  bibtex_show={true},
+  title={Image Sentiment Transfer},
+  author={T. Chen and W. Xiong and H. Zheng and J. Luo},
+  booktitle={ACM International Conference on Multimedia (ACM MM)},
+  pages={4407--4415},
+  year={2020},
+  arxiv={2006.11337},
+  preview={sentiment.jpg},
+  abstract={In this work, we introduce an important but still unexplored research task -- image sentiment transfer. Compared with other related tasks that have been well-studied, such as image-to-image translation and image style transfer, transferring the sentiment of an image is more challenging. Given an input image, the rule to transfer the sentiment of each contained object can be completely different, making existing approaches that perform global image transfer by a single reference image inadequate to achieve satisfactory performance. In this paper, we propose an effective and flexible framework that performs image sentiment transfer at the object level. It first detects the objects and extracts their pixel-level masks, and then performs object-level sentiment transfer guided by multiple reference images for the corresponding objects.}
+}
+
+@inproceedings{zheng2018crossnet,
+  abbr={ECCV},
+  bibtex_show={true},
+  title={CrossNet: An End-to-end Reference-based Super Resolution Network using Cross-scale Warping},
+  author={H. Zheng and M. Ji and H. Wang and Y. Liu and L. Fang},
+  booktitle={European Conference on Computer Vision (ECCV)},
+  pages={88--104},
+  year={2018},
+  arxiv={1807.10547},
+  code={https://github.com/htzheng/ECCV2018_CrossNet_RefSR/},
+  abstract={The Reference-based Super-resolution (RefSR) super-resolves a low-resolution (LR) image given an external high-resolution (HR) reference image, where the reference image and LR image share similar viewpoint but with significant resolution gap (8x). Existing RefSR methods work in a cascaded way such as patch matching followed by synthesis pipeline with two independently defined objective functions, leading to the inter-patch misalignment, grid effect and inefficient optimization. To resolve these issues, we present CrossNet, an end-to-end and fully-convolutional deep neural network using cross-scale warping. Our network contains image encoders, cross-scale warping layers, and fusion decoder, which improves the existing schemes both in precision (around 2dB-4dB) and efficiency (more than 100 times faster).}
+}
+
+@inproceedings{zheng2017crossscale,
+  abbr={BMVC},
+  bibtex_show={true},
+  title={Learning Cross-scale Correspondence and Patch-based Synthesis for Reference-based Super-Resolution},
+  author={H. Zheng and M. Ji and Z. Xu and H. Wang and Y. Liu and L. Fang},
+  booktitle={British Machine Vision Conference (BMVC)},
+  pages={138.1--138.13},
+  year={2017},
+  pdf={http://www.bmva.org/bmvc/2017/papers/paper138/paper138.pdf}
+}
+
+@inproceedings{ji2017surfacenet,
+  abbr={ICCV},
+  bibtex_show={true},
+  title={SurfaceNet: an End-to-end 3D Neural Network for Multiview Stereopsis},
+  author={M. Ji and G. Juergen and H. Zheng and Y. Liu and L. Fang},
+  booktitle={IEEE International Conference on Computer Vision (ICCV)},
+  pages={2307--2315},
+  year={2017},
+  arxiv={1708.01749},
+  code={https://github.com/mjiUST/SurfaceNet},
+  preview={surfacenet.jpg},
+  abstract={This paper proposes an end-to-end learning framework for multiview stereopsis. We term the network SurfaceNet. It takes a set of images and their corresponding camera parameters as input and directly infers the 3D model. The key advantage of the framework is that both photo-consistency as well as geometric relations of the surface structure can be directly learned for the purpose of multiview stereopsis in an end-to-end fashion. SurfaceNet is a fully 3D convolutional network which is achieved by encoding the camera parameters together with the images in a 3D voxel representation. We evaluate SurfaceNet on the large-scale DTU benchmark.}
+}
+
+@inproceedings{zheng2017lightfield,
+  abbr={ICCVW},
+  bibtex_show={true},
+  title={Combining Exemplar-based Approach and Learning-based Approach for Light Field Super-resolution Using a Hybrid Imaging System},
+  author={H. Zheng and M. Guo and Y. Liu and L. Fang},
+  booktitle={IEEE International Conference on Computer Vision Workshops (ICCVW)},
+  pages={2481--2486},
+  year={2017},
+  pdf={https://openaccess.thecvf.com/content_ICCV_2017_workshops/papers/w35/Zheng_Combining_Exemplar-Based_Approach_ICCV_2017_paper.pdf}
+}
+
+@inproceedings{xu2017indoor,
+  abbr={GlobalSIP},
+  bibtex_show={true},
+  title={Utilizing High-level Visual Feature for Indoor Shopping Mall Navigation},
+  author={Z. Xu and H. Zheng and M. Pang and Y. Zhu and X. Su and G. Zhou and L. Fang},
+  booktitle={IEEE Global Conference on Signal and Information Processing (GlobalSIP)},
+  pages={1378--1382},
+  year={2017},
+  arxiv={1610.01906},
+  annotation={Z. Xu and H. Zheng contributed equally.},
+  abstract={Towards robust and convenient indoor shopping mall navigation, we propose a novel learning-based scheme to utilize the high-level visual information from the storefront images captured by personal devices of users. Specifically, we decompose the visual navigation problem into localization and map generation respectively. Given a storefront input image, a novel feature fusion scheme (denoted as FusionNet) is proposed by fusing the distinguishing DNN-based appearance feature and text feature for robust recognition of store brands, which serves for accurate localization. Regarding the map generation, we convert the user-captured indicator map of the shopping mall into a topological map by parsing the stores and their connectivity.}
+}
+
+@article{zheng2016haptic,
+  abbr={TMM},
+  bibtex_show={true},
+  title={Deep Learning for Surface Material Classification Using Haptic and Visual Information},
+  author={H. Zheng and L. Fang and M. Ji and M. Strese and Y. Oezer and E. Steinbach},
+  journal={IEEE Transactions on Multimedia (TMM)},
+  volume={18},
+  pages={2407--2416},
+  year={2016},
+  arxiv={1512.06658},
+  code={https://github.com/htzheng/HapticVisualFCN},
+  abstract={When a user scratches a hand-held rigid tool across an object surface, an acceleration signal can be captured, which carries relevant information about the surface. More importantly, such a haptic signal is complementary to the visual appearance of the surface, which suggests the combination of both modalities for the recognition of the surface material. In this paper, we present a novel deep learning method dealing with the surface material classification problem based on a Fully Convolutional Network (FCN), which takes as input the aforementioned acceleration signal and a corresponding image of the surface texture. Experiments performed on the TUM surface material database demonstrate that our method achieves state-of-the-art classification accuracy robustly and efficiently.}
+}
+
+@article{zhou2016segmentation,
+  abbr={TCSVT},
+  bibtex_show={true},
+  title={Computation and Memory Efficient Image Segmentation},
+  author={Y. Zhou and T. Thanh and H. Zheng and L. Fang and N. M. Cheung},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)},
+  volume={28},
+  number={1},
+  pages={46--61},
+  year={2016},
+  html={https://ieeexplore.ieee.org/document/7543518/}
+}
+
+@inproceedings{zheng2015sports,
+  abbr={APSIPA},
+  bibtex_show={true},
+  title={Analysis of Sports Statistics via Graph-Signal Smoothness Prior},
+  author={H. Zheng and G. Cheung and L. Fang},
+  booktitle={Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC)},
+  pages={1071--1076},
+  year={2015},
+  pdf={http://www.apsipa.org/proceedings_2015/pdf/297.pdf}
+}
+
+@inproceedings{ji2015acnn,
+  abbr={MLSP},
+  bibtex_show={true},
+  title={Preprocessing-free Surface Material Classification Using Convolutional Neural Networks Pretrained by Sparse Autoencoder},
+  author={M. Ji and L. Fang and H. Zheng and M. Strese and E. Steinbach},
+  booktitle={IEEE International Workshop on Machine Learning for Signal Processing (MLSP)},
+  pages={1--6},
+  year={2015},
+  html={https://ieeexplore.ieee.org/document/7324324/}
+}
+
+@inproceedings{do2014melanoma,
+  abbr={EMBC},
+  bibtex_show={true},
+  title={Early Melanoma Diagnosis with Mobile Imaging},
+  author={T. T. Do and Y. Zhou and H. Zheng and N. M. Cheung and D. Koh},
+  booktitle={International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)},
+  pages={6752--6757},
+  year={2014},
+  html={https://ieeexplore.ieee.org/document/6945178/}
+}

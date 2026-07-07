@@ -1,0 +1,38 @@
+"CVPR":
+  color: "#1e6091"
+"ICCV":
+  color: "#168aad"
+"ECCV":
+  color: "#2a6f97"
+"NeurIPS":
+  color: "#6a4c93"
+"AAAI":
+  color: "#c1121f"
+"SIGGRAPH":
+  color: "#b5179e"
+"TPAMI":
+  color: "#8a2be2"
+"TIP":
+  color: "#3a5a40"
+"TMM":
+  color: "#40916c"
+"TCSVT":
+  color: "#52796f"
+"ICIP":
+  color: "#457b9d"
+"ICPR":
+  color: "#5c677d"
+"Big Data":
+  color: "#e07a5f"
+"GlobalSIP":
+  color: "#6c757d"
+"ICCVW":
+  color: "#4ea8de"
+"BMVC":
+  color: "#e56b6f"
+"APSIPA":
+  color: "#7f5539"
+"MLSP":
+  color: "#6d6875"
+"EMBC":
+  color: "#9d0208"
