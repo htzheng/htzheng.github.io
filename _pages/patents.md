@@ -1,10 +1,10 @@
 ---
 layout: page
 permalink: /patents/
-title: patents
+title: Patents
 description: US patents and pending applications.
 nav: true
-nav_order: 3
+nav_order: 4
 ---
 
 <!-- _pages/patents.md -->

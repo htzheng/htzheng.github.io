@@ -1,0 +1,146 @@
+/*******************************************************************************
+ * Home / About page polish. Loaded last (see assets/css/main.scss) so these
+ * rules win over _base.scss by load order. All colors use theme tokens so
+ * light + dark modes both adapt automatically.
+ ******************************************************************************/
+
+/* ---- Profile contact caption: replace the terminal-style monospace ---- */
+.profile {
+  .more-info {
+    margin-top: 0.7rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--global-text-color-light);
+
+    p {
+      display: block; // one item per line (base forces inline-block)
+      margin: 0;
+    }
+
+    i {
+      width: 1.1em;
+      margin-right: 0.45em;
+      color: var(--global-theme-color);
+      text-align: center;
+    }
+  }
+}
+
+/* ---- Name + subtitle header ---- */
+.post-header {
+  .post-title {
+    margin-bottom: 0.2rem;
+    letter-spacing: -0.015em;
+  }
+
+  .desc {
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--global-text-color-light);
+    margin-bottom: 1.5rem;
+
+    a {
+      color: var(--global-theme-color);
+    }
+  }
+}
+
+/* ---- Section headings (SHIPPED FEATURES / SELECTED PUBLICATIONS) ---- */
+.section-heading {
+  position: relative;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.55rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+
+  a {
+    color: inherit;
+  }
+
+  // short accent underline bar
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 2.75rem;
+    height: 3px;
+    border-radius: 2px;
+    background-color: var(--global-theme-color);
+  }
+}
+
+// the manual divider between sections already carries its own spacing;
+// avoid doubling the gap before the following section heading
+hr + .section-heading {
+  margin-top: 0.5rem;
+}
+
+/* ---- Shipped-features cards ---- */
+.shipped-features {
+  &.row {
+    margin-top: 0.5rem;
+  }
+
+  .feature-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1.3rem 1.4rem;
+    background-color: var(--global-card-bg-color);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+
+    h3 {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      margin-bottom: 0.6rem;
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--global-theme-color);
+
+      i {
+        font-size: 1rem;
+      }
+    }
+
+    > p {
+      margin-bottom: 0.8rem;
+      font-size: 0.92rem;
+      line-height: 1.5;
+      color: var(--global-text-color);
+    }
+
+    ul {
+      margin-bottom: 0;
+      padding-left: 1.15rem;
+      font-size: 0.9rem;
+
+      li {
+        margin-bottom: 0.3rem;
+      }
+    }
+
+    // "Related research" line (rendered on /shipped/ only) pinned to bottom
+    .shipped-research {
+      margin-top: auto;
+      margin-bottom: 0;
+      padding-top: 0.9rem;
+      font-size: 0.85rem;
+      color: var(--global-text-color-light);
+    }
+  }
+
+  .feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  }
+}

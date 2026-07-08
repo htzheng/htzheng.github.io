@@ -1,6 +1,31 @@
 ---
 ---
 
+@article{zhou2026triprompting,
+  preview={triprompting.jpg},
+  abbr={arXiv},
+  bibtex_show={true},
+  title={Tri-Prompting: Video Diffusion with Unified Control over Scene, Subject, and Motion},
+  author={Z. Zhou and X. Zhan and Z. Chen and S. Y. Kim and N. Zhao and H. Zheng and Q. Liu and H. Zhang and Z. Lin and Y. Zhou and J. Luo},
+  journal={arXiv preprint arXiv:2603.15614},
+  year={2026},
+  arxiv={2603.15614},
+  website={https://zhouzhenghong-gt.github.io/Tri-Prompting-Page/},
+  abstract={Recent video diffusion models have made remarkable strides in visual quality, yet precise, fine-grained control remains a key bottleneck that limits practical customizability for content creation. For AI video creators, three forms of control are crucial: (i) scene composition, (ii) multi-view consistent subject customization, and (iii) camera-pose or object-motion adjustment. Existing methods typically handle these dimensions in isolation, with limited support for multi-view subject synthesis and identity preservation under arbitrary pose changes. This lack of a unified architecture makes it difficult to support versatile, jointly controllable video. We introduce Tri-Prompting, a unified framework and two-stage training paradigm that integrates scene composition, multi-view subject consistency, and motion control. Our approach leverages a dual-condition motion module driven by 3D tracking points for background scenes and downsampled RGB cues for foreground subjects. To ensure a balance between controllability and visual realism, we further propose an inference ControlNet scale schedule. Tri-Prompting supports novel workflows, including 3D-aware subject insertion into any scenes and manipulation of existing subjects in an image. Experimental results demonstrate that Tri-Prompting significantly outperforms specialized baselines such as Phantom and DaS in multi-view subject identity, 3D consistency, and motion accuracy.}
+}
+
+@inproceedings{wang2026hbridge,
+  preview={hbridge.jpg},
+  abbr={CVPR},
+  bibtex_show={true},
+  title={HBridge: H-Shape Bridging of Heterogeneous Experts for Unified Multimodal Understanding and Generation},
+  author={X. Wang and Z. Zhang and H. Zhang and Z. Lin and Y. Zhou and Q. Liu and S. Zhang and Y. Li and S. Liu and H. Zheng and J. Kuen and Y. Wang and C. Gao and N. Sang},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2026},
+  arxiv={2511.20520},
+  abstract={Recent unified models integrate understanding experts (e.g., LLMs) with generative experts (e.g., diffusion models), achieving strong multimodal performance. However, recent advanced methods such as BAGEL and LMFusion follow the Mixture-of-Transformers (MoT) paradigm, adopting a symmetric design that mirrors one expert to another for convenient initialization and fusion, which remains suboptimal due to inherent modality discrepancies. In this work, we propose HBridge, an asymmetric H-shaped architecture that enables heterogeneous experts to optimally leverage pretrained priors from their respective modality domains. Unlike prior dense fusion strategies that straightforwardly connect all layers between experts via shared attention, HBridge selectively bridges intermediate layers, reducing over 40% attention sharing, which improves efficiency and enhances generation quality. Shallow and deep layers, which capture modality-specific representations, are decoupled, while mid-layer bridging promotes semantic alignment. To further strengthen cross-modal coherence, we introduce semantic reconstruction tokens that explicitly guide the generative expert to reconstruct visual semantic tokens of the target image. Extensive experiments across multiple benchmarks demonstrate the effectiveness and superior performance of HBridge, establishing a new paradigm for unified multimodal generation.}
+}
+
 @inproceedings{yu2025realuhr,
   abbr={AAAI},
   bibtex_show={true},
@@ -16,6 +41,7 @@
 }
 
 @inproceedings{zheng2025pixperfect,
+  preview={pixperfect.jpg},
   abbr={NeurIPS},
   bibtex_show={true},
   selected={true},
@@ -81,6 +107,18 @@
   abstract={Shadows are often under-considered or even ignored in image editing applications, limiting the realism of the edited results. In this paper, we introduce MetaShadow, a three-in-one versatile framework that enables detection, removal, and controllable synthesis of shadows in natural images in an object-centered fashion. MetaShadow combines the strengths of two cooperative components: Shadow Analyzer, for object-centered shadow detection and removal, and Shadow Synthesizer, for reference-based controllable shadow synthesis. Notably, we optimize the learning of the intermediate features from Shadow Analyzer to guide Shadow Synthesizer to generate more realistic shadows that blend seamlessly with the scene. Extensive evaluations on multiple shadow benchmark datasets show significant improvements of MetaShadow over the existing state-of-the-art methods on object-centered shadow detection, removal, and synthesis.}
 }
 
+@article{yu2025zipir,
+  preview={zipir.jpg},
+  abbr={arXiv},
+  bibtex_show={true},
+  title={ZipIR: Latent Pyramid Diffusion Transformer for High-Resolution Image Restoration},
+  author={Y. Yu and H. Zheng and Z. Zhang and J. Zhang and Y. Zhou and C. Barnes and Y. Liu and W. Xiong and Z. Lin and J. Luo},
+  journal={arXiv preprint arXiv:2504.08591},
+  year={2025},
+  arxiv={2504.08591},
+  abstract={Recent progress in generative models has significantly improved image restoration capabilities, particularly through powerful diffusion models that offer remarkable recovery of semantic details and local fidelity. However, deploying these models at ultra-high resolutions faces a critical trade-off between quality and efficiency due to the computational demands of long-range attention mechanisms. To address this, we introduce ZipIR, a novel framework that enhances efficiency, scalability, and long-range modeling for high-res image restoration. ZipIR employs a highly compressed latent representation that compresses image 32x, effectively reducing the number of spatial tokens, and enabling the use of high-capacity models like the Diffusion Transformer (DiT). Toward this goal, we propose a Latent Pyramid VAE (LP-VAE) design that structures the latent space into sub-bands to ease diffusion training. Trained on full images up to 2K resolution, ZipIR surpasses existing diffusion-based methods, offering unmatched speed and quality in restoring high-resolution images from severely degraded inputs.}
+}
+
 @inproceedings{liu2024deocclusion,
   abbr={SIGGRAPH},
   bibtex_show={true},
@@ -95,6 +133,7 @@
 }
 
 @article{zheng2024structure,
+  preview={structure.jpg},
   abbr={TPAMI},
   bibtex_show={true},
   selected={true},
@@ -104,6 +143,43 @@
   year={2024},
   arxiv={2212.06310},
   abstract={Structure-guided image completion aims to inpaint a local region of an image according to an input guidance map from users. While such a task enables many practical applications for interactive editing, existing methods often struggle to hallucinate realistic object instances in complex natural scenes. Such a limitation is partially due to the lack of semantic-level constraints inside the hole region as well as the lack of a mechanism to enforce realistic object generation. In this work, we propose a learning paradigm that consists of semantic discriminators and object-level discriminators for improving the generation of complex semantics and objects. Specifically, the semantic discriminators leverage pretrained visual features to improve the realism of the generated visual concepts. Moreover, the object-level discriminators take aligned instances as inputs to enforce the realism of individual objects. Our proposed scheme significantly improves the generation quality and achieves state-of-the-art results on various tasks, including segmentation-guided completion, edge-guided manipulation and panoptically-guided manipulation on Places2 datasets.}
+}
+
+@inproceedings{zhao2023pointcloud,
+  preview={pointcloud.jpg},
+  abbr={ICIP},
+  bibtex_show={true},
+  title={Point Cloud Denoising via Momentum Ascent in Gradient Fields},
+  author={Y. Zhao and H. Zheng and Z. Wang and J. Luo and E. Y. Lam},
+  booktitle={IEEE International Conference on Image Processing (ICIP)},
+  year={2023},
+  arxiv={2202.10094},
+  abstract={To achieve point cloud denoising, traditional methods heavily rely on geometric priors, and most learning-based approaches suffer from outliers and loss of details. Recently, the gradient-based method was proposed to estimate the gradient fields from the noisy point clouds using neural networks, and refine the position of each point according to the estimated gradient. However, the predicted gradient could fluctuate, leading to perturbed and unstable solutions, as well as a long inference time. To address these issues, we develop the momentum gradient ascent method that leverages the information of previous iterations in determining the trajectories of the points, thus improving the stability of the solution and reducing the inference time. Experiments demonstrate that the proposed method outperforms state-of-the-art approaches with a variety of point clouds, noise types, and noise levels.}
+}
+
+@inproceedings{zhao2023videocolor,
+  preview={videocolor.jpg},
+  abbr={ICIP},
+  bibtex_show={true},
+  title={Improving Video Colorization by Test-Time Tuning},
+  author={Y. Zhao and H. Zheng and J. Luo and E. Y. Lam},
+  booktitle={IEEE International Conference on Image Processing (ICIP)},
+  year={2023},
+  arxiv={2307.11757},
+  code={https://github.com/IndigoPurple/T3},
+  abstract={With the advancements in deep learning, video colorization by propagating color information from a colorized reference frame to a monochrome video sequence has been well explored. However, the existing approaches often suffer from overfitting the training dataset and sequentially lead to suboptimal performance on colorizing testing samples. To address this issue, we propose an effective method, which aims to enhance video colorization through test-time tuning. By exploiting the reference to construct additional training samples during testing, our approach achieves a performance boost of 1~3 dB in PSNR on average compared to the baseline. Code is available at: https://github.com/IndigoPurple/T3}
+}
+
+@inproceedings{martin2023jurassic,
+  preview={jurassic.jpg},
+  abbr={ACM MM},
+  bibtex_show={true},
+  title={Jurassic World Remake: Bringing Ancient Fossils Back to Life via Zero-Shot Long Image-to-Image Translation},
+  author={A. Martin and H. Zheng and J. An and J. Luo},
+  booktitle={ACM International Conference on Multimedia (ACM MM)},
+  year={2023},
+  arxiv={2308.07316},
+  abstract={With a strong understanding of the target domain from natural language, we produce promising results in translating across large domain gaps and bringing skeletons back to life. In this work, we use text-guided latent diffusion models for zero-shot image-to-image translation (I2I) across large domain gaps (longI2I), where large amounts of new visual features and new geometry need to be generated to enter the target domain. Being able to perform translations across large domain gaps has a wide variety of real-world applications in criminology, astrology, environmental conservation, and paleontology. In this work, we introduce a new task Skull2Animal for translating between skulls and living animals. On this task, we find that unguided Generative Adversarial Networks (GANs) are not capable of translating across large domain gaps. Instead of these traditional I2I methods, we explore the use of guided diffusion and image editing models and provide a new benchmark model, Revive-2I, capable of performing zero-shot I2I via text-prompting latent diffusion models. We find that guidance is necessary for longI2I because, to bridge the large domain gap, prior knowledge about the target domain is needed. In addition, we find that prompting provides the best and most scalable information about the target domain as classifier-guided diffusion models require retraining for specific use cases and lack stronger constraints on the target domain because of the wide variety of images they are trained on.}
 }
 
 @inproceedings{zheng2022cmgan,
@@ -124,6 +200,7 @@
 @article{zheng2022semantic,
   abbr={TPAMI},
   bibtex_show={true},
+  selected={true},
   title={Semantic Layout Manipulation with High-Resolution Sparse Attention},
   author={H. Zheng and Z. Lin and J. Lu and S. Cohen and J. Zhang and N. Xu and J. Luo},
   journal={IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},
@@ -136,6 +213,7 @@
 @inproceedings{shi2022spaceedit,
   abbr={CVPR},
   bibtex_show={true},
+  selected={true},
   title={SpaceEdit: Learning a Unified Editing Space for Open-Domain Image Color Editing},
   author={J. Shi and N. Xu and H. Zheng and A. Smith and J. Luo and C. Xu},
   booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
@@ -160,6 +238,7 @@
 }
 
 @inproceedings{zhu2022noisylabels,
+  preview={noisylabels.jpg},
   abbr={ICPR},
   bibtex_show={true},
   title={Learning to Aggregate and Refine Noisy Labels for Visual Sentiment Analysis},
@@ -169,6 +248,18 @@
   year={2022},
   arxiv={2109.07509},
   abstract={Visual sentiment analysis has received increasing attention in recent years. However, the dataset's quality is a concern because the sentiment labels are crowd-sourcing, subjective, and prone to mistakes, and poses a severe threat to the data-driven models, especially the deep neural networks. The deep models would generalize poorly on the testing cases when trained to over-fit the training samples with noisy sentiment labels. Inspired by the recent progress on learning with noisy labels, we propose a robust learning method to perform robust visual sentiment analysis. Our method relies on external memory to aggregate and filter noisy labels during training. The memory is composed of the prototypes with corresponding labels, which can be updated online.}
+}
+
+@inproceedings{zhao2022crosscamera,
+  preview={crosscamera.jpg},
+  abbr={CICAI},
+  bibtex_show={true},
+  title={Cross-Camera Deep Colorization},
+  author={Y. Zhao and H. Zheng and M. Ji and R. Huang},
+  booktitle={CAAI International Conference on Artificial Intelligence (CICAI)},
+  year={2022},
+  arxiv={2209.01211},
+  abstract={In this paper, we consider the color-plus-mono dual-camera system and propose an end-to-end convolutional neural network to align and fuse images from it in an efficient and cost-effective way. Our method takes cross-domain and cross-scale images as input, and consequently synthesizes HR colorization results to facilitate the trade-off between spatial-temporal resolution and color depth in the single-camera imaging system. In contrast to the previous colorization methods, ours can adapt to color and monochrome cameras with distinctive spatial-temporal resolutions, rendering the flexibility and robustness in practical applications. The key ingredient of our method is a cross-camera alignment module that generates multi-scale correspondences for cross-domain image alignment. Through extensive experiments on various datasets and multiple settings, we validate the flexibility and effectiveness of our approach. Remarkably, our method consistently achieves substantial improvements, i.e., around 10dB PSNR gain, upon the state-of-the-art methods.}
 }
 
 @inproceedings{zheng2021fashion,
@@ -188,6 +279,7 @@
 @inproceedings{zhu2021biasinvariant,
   abbr={ICCV},
   bibtex_show={true},
+  selected={true},
   title={Learning Bias-Invariant Representation by Cross-Sample Mutual Information Minimization},
   author={W. Zhu and H. Zheng and H. Liao and W. Li and J. Luo},
   booktitle={IEEE/CVF International Conference on Computer Vision (ICCV)},
@@ -199,8 +291,10 @@
 }
 
 @inproceedings{zheng2020exampleguided,
+  preview={exampleguided.jpg},
   abbr={ECCV},
   bibtex_show={true},
+  selected={true},
   title={Example-Guided Image Synthesis using Masked Spatial-Channel Attention and Self-Supervision},
   author={H. Zheng and H. Liao and L. Chen and W. Xiong and J. Luo},
   booktitle={European Conference on Computer Vision (ECCV)},
@@ -214,6 +308,7 @@
 @article{zheng2020poseflow,
   abbr={TIP},
   bibtex_show={true},
+  selected={true},
   title={Pose Flow Learning from Person Images for Pose Guided Synthesis},
   author={H. Zheng and L. Chen and C. Xu and J. Luo},
   journal={IEEE Transactions on Image Processing (TIP)},
@@ -229,6 +324,7 @@
 @article{tan2020crossnetpp,
   abbr={TPAMI},
   bibtex_show={true},
+  selected={true},
   title={CrossNet++: Cross-scale Large-parallax Warping for Reference-based Super-resolution},
   author={Y. Tan and H. Zheng and Y. Zhu and L. Fang},
   journal={IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},
@@ -237,7 +333,8 @@
   pages={4291--4305},
   year={2020},
   html={https://www.semanticscholar.org/paper/CrossNet%2B%2B%3A-Cross-Scale-Large-Parallax-Warping-Tan-Zheng/3bb3b4773159acfb2fa56c4899b08fc4a3dc02b6},
-  annotation={Y. Tan and H. Zheng contributed equally.}
+  annotation={Y. Tan and H. Zheng contributed equally.},
+  abstract={The ability of camera arrays to efficiently capture higher space-bandwidth product than single cameras has led to various multiscale and hybrid systems. These systems play vital roles in computational photography, including light field imaging, 360 VR camera, gigapixel videography, etc. One of the critical tasks in multiscale hybrid imaging is matching and fusing cross-resolution images from different cameras under perspective parallax. In this paper, we investigate the reference-based super-resolution (RefSR) problem associated with dual-camera or multi-camera systems. RefSR consists of super-resolving a low-resolution (LR) image given an external high-resolution (HR) reference image, where they suffer both a significant resolution gap (8×) and large parallax (∼10% pixel displacement). We present CrossNet++, an end-to-end network containing novel two-stage cross-scale warping modules, image encoder and fusion decoder. The stage I learns to narrow down the parallax distinctively with the strong guidance of landmarks and intensity distribution consensus. Then the stage II operates more fine-grained alignment and aggregation in feature domain to synthesize the final super-resolved image. To further address the large parallax, new hybrid loss functions comprising warping loss, landmark loss and super-resolution loss are proposed to regularize training and enable better convergence. CrossNet++ significantly outperforms the state-of-art on light field datasets as well as real dual-camera data. We further demonstrate the generalization of our framework by transferring it to video super-resolution and video denoising.}
 }
 
 @inproceedings{yang2020adversarial,
@@ -248,12 +345,14 @@
   booktitle={International Conference on Pattern Recognition (ICPR)},
   pages={2368--2374},
   year={2020},
-  html={https://ieeexplore.ieee.org/document/9412914/}
+  html={https://ieeexplore.ieee.org/document/9412914/},
+  abstract={Scene text recognition is a challenging task due to the diversity in text appearance and complexity of natural scenes. Thanks to the development of deep learning and the large volume of training data, scene text recognition has made impressive progress in recent years. However, recent research on adversarial examples has shown that deep learning models are vulnerable to adversarial input with often imperceptible changes. As one of the most practical tasks in computer vision, scene text recognition is also facing huge security risks. To our best knowledge, there has been no work on adversarial attacks against scene text recognition. To investigate its effects on scene text recognition, we make the first attempt to attack the state-of-the-art scene text recognizers, i.e., attention-based recognizers. To that end, we first adjust the objective function designed for non-sequential tasks, such as image classification, semantic segmentation and image retrieval, to the sequential form. We then propose a novel and effective objective function to further reduce the amount of perturbation while achieving a higher attack success rate. Comprehensive experiments on several standard benchmarks clearly demonstrate effective adversarial effects on scene text recognition by the proposed attacks. It is noteworthy that while this is harmful for a recognition system, it is highly advantageous for a text-based CAPTCHA system.}
 }
 
 @inproceedings{chen2020sentiment,
   abbr={ACM MM},
   bibtex_show={true},
+  selected={true},
   title={Image Sentiment Transfer},
   author={T. Chen and W. Xiong and H. Zheng and J. Luo},
   booktitle={ACM International Conference on Multimedia (ACM MM)},
@@ -265,6 +364,7 @@
 }
 
 @inproceedings{zheng2018crossnet,
+  preview={crossnet.jpg},
   abbr={ECCV},
   bibtex_show={true},
   title={CrossNet: An End-to-end Reference-based Super Resolution Network using Cross-scale Warping},
@@ -285,7 +385,8 @@
   booktitle={British Machine Vision Conference (BMVC)},
   pages={138.1--138.13},
   year={2017},
-  pdf={http://www.bmva.org/bmvc/2017/papers/paper138/paper138.pdf}
+  pdf={http://www.bmva.org/bmvc/2017/papers/paper138/paper138.pdf},
+  abstract={In this paper, we explore the Reference-based Super-Resolution (RefSR) problem, which aims to super-resolve a low definition (LR) input to a high definition (HR) output, given another HR reference image that shares similar viewpoint or capture time with the LR input. We solve this problem by proposing a learning-based scheme, denoted as RefSR-Net. Specifically, we first design a Cross-scale Correspondence Network (CCNet) to indicate the cross-scale patch matching between reference and LR image. The CC-Net is formulated as a classification problem which predicts the correct matches from the candidate patches within the search range. Using dilated convolution, the training and feature map generation are efficiently implemented. Given the reference patch selected via CC-Net, we further propose a Super-resolution image Synthesis Network (SS-Net) for the synthesis of the HR output, by fusing the LR patch and the reference patch at multiple scales. Experiments on MPI Sintel Dataset and Light-Field (LF) video dataset demonstrate our learned correspondence features outperform existing features, and our proposed RefSR-Net substantially outperforms conventional single image SR and exemplar-based SR approaches.}
 }
 
 @inproceedings{ji2017surfacenet,
@@ -303,6 +404,7 @@
 }
 
 @inproceedings{zheng2017lightfield,
+  preview={lightfield.jpg},
   abbr={ICCVW},
   bibtex_show={true},
   title={Combining Exemplar-based Approach and Learning-based Approach for Light Field Super-resolution Using a Hybrid Imaging System},
@@ -310,10 +412,12 @@
   booktitle={IEEE International Conference on Computer Vision Workshops (ICCVW)},
   pages={2481--2486},
   year={2017},
-  pdf={https://openaccess.thecvf.com/content_ICCV_2017_workshops/papers/w35/Zheng_Combining_Exemplar-Based_Approach_ICCV_2017_paper.pdf}
+  pdf={https://openaccess.thecvf.com/content_ICCV_2017_workshops/papers/w35/Zheng_Combining_Exemplar-Based_Approach_ICCV_2017_paper.pdf},
+  abstract={We propose a new method to super-resolve images captured by a hybrid light field system that consists of a standard light field camera and a high-resolution standard camera. The high-resolution image is taken as a reference to help with super-resolving the low-resolution light field images. Our method combines an exemplar-based algorithm with the state-of-the-art single image super-resolution approach and draws on the strengths of both. Both quantitative and qualitative experiments show that our proposed method substantially outperforms existing methods on standard light field datasets in the challenging large parallax setting.}
 }
 
 @inproceedings{xu2017indoor,
+  preview={indoor.jpg},
   abbr={GlobalSIP},
   bibtex_show={true},
   title={Utilizing High-level Visual Feature for Indoor Shopping Mall Navigation},
@@ -327,6 +431,7 @@
 }
 
 @article{zheng2016haptic,
+  preview={haptic.jpg},
   abbr={TMM},
   bibtex_show={true},
   title={Deep Learning for Surface Material Classification Using Haptic and Visual Information},
@@ -341,19 +446,22 @@
 }
 
 @article{zhou2016segmentation,
+  preview={segmentation.jpg},
   abbr={TCSVT},
   bibtex_show={true},
   title={Computation and Memory Efficient Image Segmentation},
-  author={Y. Zhou and T. Thanh and H. Zheng and L. Fang and N. M. Cheung},
+  author={Y. Zhou and T. T. Do and H. Zheng and L. Fang and N. M. Cheung},
   journal={IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)},
   volume={28},
   number={1},
   pages={46--61},
   year={2016},
-  html={https://ieeexplore.ieee.org/document/7543518/}
+  html={https://ieeexplore.ieee.org/document/7543518/},
+  abstract={In this paper, we address the segmentation problem under limited computation and memory resources. Given a segmentation algorithm, we propose a framework that can reduce its computation time and memory requirement simultaneously, while preserving its accuracy. The proposed framework uses standard pixel-domain downsampling and includes two main steps. Coarse segmentation is first performed on the downsampled image. Refinement is then applied to the coarse segmentation results. We make two novel contributions to enable competitive accuracy using this simple framework. First, we rigorously examine the effect of downsampling on segmentation using a signal processing analysis. The analysis helps to determine the uncertain regions, which are small image regions where pixel labels are uncertain after the coarse segmentation. Second, we propose an efficient minimum spanning tree-based algorithm to propagate the labels into the uncertain regions. We perform extensive experiments using several standard data sets. The experimental results show that our segmentation accuracy is comparable to state-of-the-art methods, while requiring much less computation time and memory than those methods.}
 }
 
 @inproceedings{zheng2015sports,
+  preview={sports.jpg},
   abbr={APSIPA},
   bibtex_show={true},
   title={Analysis of Sports Statistics via Graph-Signal Smoothness Prior},
@@ -361,7 +469,8 @@
   booktitle={Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC)},
   pages={1071--1076},
   year={2015},
-  pdf={http://www.apsipa.org/proceedings_2015/pdf/297.pdf}
+  pdf={http://www.apsipa.org/proceedings_2015/pdf/297.pdf},
+  abstract={Since teams in a sporting league compete head-to-head according to a structured schedule, it is natural to interpret statistics emanating from competitions as signals on a graph modeling similarities among competing entities. In this paper, we analyse available sports statistics to predict game outcomes from a graph signal processing (GSP) perspective: GSP tools are used to remove (denoise) unwanted variability to reveal underlying predictable trends, and to interpolate missing data—predicted game outcomes in terms of point differential. First, we construct a graph for the desired graph-signal (point differential for every team pair): for an N-team league, we construct N subgraphs Gj, each containing N−1 nodes representing teams competing against opponent j. We next assign weight to each intra-subgraph edge based on similarity in observed statistics (e.g., total points scored, assists, etc) of the two connecting nodes (teams). We then connect nodes in different subgraphs representing the same teams, where the weight of an inter-subgraph edge connecting nodes in subgraphs Gk and Gl now reflects the similarity between opponents k and l. Finally, assuming a graph-signal smoothness prior, we compute the desired graph-signal on the constructed graph via an alternating convex programming procedure. Experimental results show that our graph-based scheme achieves better prediction than a competing k-nearest neighbor (kNN) scheme.}
 }
 
 @inproceedings{ji2015acnn,
@@ -372,7 +481,8 @@
   booktitle={IEEE International Workshop on Machine Learning for Signal Processing (MLSP)},
   pages={1--6},
   year={2015},
-  html={https://ieeexplore.ieee.org/document/7324324/}
+  html={https://ieeexplore.ieee.org/document/7324324/},
+  abstract={Acceleration signals captured during the interaction of a rigid tool with an object surface carry relevant information for surface material classification. Existing methods mostly rely on carefully designed perception-related features or features adapted from audio processing motivated by the observed similarity between acceleration signals and audio signals. In contrast, our proposed method automatically learns features from RAW acceleration data without preprocessing. The approach is based on Convolutional Neural Networks (CNN) trained and tested on RAW data. For better performance and faster convergence of the CNN, we use the weights of a trained sparse Autoencoder (AE) to initialize the weights of the first convolution layers of the CNN. This strategy is named CNN pretrained by sparse AE (ACNN). Our classification results on a publically available Haptic Texture Database demonstrate that the proposed algorithm performs favorably against existing methods.}
 }
 
 @inproceedings{do2014melanoma,
@@ -383,5 +493,6 @@
   booktitle={International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)},
   pages={6752--6757},
   year={2014},
-  html={https://ieeexplore.ieee.org/document/6945178/}
+  html={https://ieeexplore.ieee.org/document/6945178/},
+  abstract={We research a mobile imaging system for early diagnosis of melanoma. Different from previous work, we focus on smartphone-captured images, and propose a detection system that runs entirely on the smartphone. Smartphone-captured images taken under loosely-controlled conditions introduce new challenges for melanoma detection, while processing performed on the smartphone is subject to computation and memory constraints. To address these challenges, we propose to localize the skin lesion by combining fast skin detection and fusion of two fast segmentation results. We propose new features to capture color variation and border irregularity which are useful for smartphone-captured images. We also propose a new feature selection criterion to select a small set of good features used in the final lightweight system. Our evaluation confirms the effectiveness of proposed algorithms and features. In addition, we present our system prototype which computes selected visual features from a user-captured skin lesion image, and analyzes them to estimate the likelihood of malignance, all on an off-the-shelf smartphone.}
 }
