@@ -144,3 +144,46 @@ hr + .section-heading {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
   }
 }
+
+/* ---- Publication/patent thumbnail: click to zoom, with a magnifier-plus cue ----
+   Same-image entries zoom via medium-zoom; entries with a separate `preview_zoom`
+   open it in a Lightbox2 overlay (see _layouts/bib.liquid). */
+.preview-zoomable {
+  position: relative;
+  display: block;
+  cursor: zoom-in;
+
+  figure {
+    margin: 0;
+  }
+  a,
+  .preview {
+    cursor: zoom-in;
+  }
+  a {
+    display: block;
+  }
+
+  .preview-zoomable__cue {
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    font-size: 11px;
+    opacity: 0.75;
+    transition: opacity 0.15s ease;
+    pointer-events: none; // let clicks pass through to the image/link beneath
+  }
+
+  &:hover .preview-zoomable__cue {
+    opacity: 1;
+  }
+}
+

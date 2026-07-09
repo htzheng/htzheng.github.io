@@ -15,6 +15,8 @@ profile:
 shipped_features: true # includes a summary of shipped product features
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false # in-body icons off; social links shown in the top navbar instead (enable_navbar_social)
+images:
+  lightbox2: true # for selected papers whose thumbnail defines a separate `preview_zoom` (opened at natural aspect on click)
 
 announcements:
   enabled: false # includes a list of news items

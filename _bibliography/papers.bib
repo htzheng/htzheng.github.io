@@ -2,7 +2,8 @@
 ---
 
 @article{zhou2026triprompting,
-  preview={triprompting.jpg},
+  preview={triprompting_thumb.gif},
+  preview_zoom={triprompting.gif},
   abbr={arXiv},
   bibtex_show={true},
   title={Tri-Prompting: Video Diffusion with Unified Control over Scene, Subject, and Motion},
@@ -16,6 +17,7 @@
 
 @inproceedings{wang2026hbridge,
   preview={hbridge.jpg},
+  preview_zoom={hbridge_zoom.jpg},
   abbr={CVPR},
   bibtex_show={true},
   title={HBridge: H-Shape Bridging of Heterogeneous Experts for Unified Multimodal Understanding and Generation},
@@ -37,11 +39,13 @@
   html={https://ojs.aaai.org/index.php/AAAI/article/view/38211},
   pdf={https://ojs.aaai.org/index.php/AAAI/article/download/38211/42173},
   preview={realuhr.jpg},
+  preview_zoom={realuhr_zoom.jpg},
   abstract={Ultra-high-resolution (UHR) text-to-image synthesis faces significant hurdles, including immense computational costs and a scarcity of training data. To address these, we introduce RealUHR, an efficient and scalable framework for generating photorealistic 4K images. At its core, RealUHR employs a Patch-Cascade Flow Matching pipeline that ensures global coherence without costly patch fusion by initiating generation from a semantically meaningful structure. This enables highly efficient, few-step inference for independent patches. Our key contribution is Guidance-Consistent Adaptation (GCA), a novel two-stage strategy to resolve the fundamental objective mismatch in guidance-distilled models. GCA allows powerful backbones like FLUX to be effectively adapted for patch-aware UHR synthesis. The framework's detail-rendering capabilities are further enhanced by a non-uniform time schedule. Experiments show that RealUHR establishes superior performance in both quality and efficiency, and excels in zero-shot applications such as creative up-sampling and generative artifact suppression.}
 }
 
 @inproceedings{zheng2025pixperfect,
   preview={pixperfect.jpg},
+  preview_zoom={pixperfect_zoom.jpg},
   abbr={NeurIPS},
   bibtex_show={true},
   selected={true},
@@ -64,7 +68,7 @@
   year={2025},
   arxiv={2503.08677},
   website={https://yeates.github.io/OmniPaint-Page/},
-  preview={omnipaint.jpg},
+  preview={omnipaint.gif},
   abstract={Diffusion-based generative models have revolutionized object-oriented image editing, yet their deployment in realistic object removal and insertion remains hampered by challenges such as the intricate interplay of physical effects and insufficient paired training data. In this work, we introduce OmniPaint, a unified framework that re-conceptualizes object removal and insertion as interdependent processes rather than isolated tasks. Leveraging a pre-trained diffusion prior along with a progressive training pipeline comprising initial paired sample optimization and subsequent large-scale unpaired refinement via CycleFlow, OmniPaint achieves precise foreground elimination and seamless object insertion while faithfully preserving scene geometry and intrinsic properties. Furthermore, our novel CFD metric offers a robust, reference-free evaluation of context consistency and object hallucination, establishing a new benchmark for high-fidelity image editing.}
 }
 
@@ -76,7 +80,7 @@
   booktitle={IEEE/CVF International Conference on Computer Vision (ICCV)},
   year={2025},
   arxiv={2412.15689},
-  preview={dollar.jpg},
+  preview={dollar.gif},
   abstract={Diffusion probabilistic models have shown significant progress in video generation; however, their computational efficiency is limited by the large number of sampling steps required. Reducing sampling steps often compromises video quality or generation diversity. In this work, we introduce a distillation method that combines variational score distillation and consistency distillation to achieve few-step video generation, maintaining both high quality and diversity. We also propose a latent reward model fine-tuning approach to further enhance video generation performance according to any specified reward metric. This approach reduces memory usage and does not require the reward to be differentiable. Our method demonstrates state-of-the-art performance in few-step generation for 10-second videos (128 frames at 12 FPS). The distilled student model achieves a score of 82.57 on VBench, surpassing the teacher model as well as baseline models Gen-3, T2V-Turbo, and Kling. One-step distillation accelerates the teacher model's diffusion sampling by up to 278.6 times, enabling near real-time generation.}
 }
 
@@ -91,6 +95,7 @@
   arxiv={2504.00996},
   website={https://liangbinxie.github.io/projects/TurboFill/},
   preview={turbofill.jpg},
+  preview_zoom={turbofill_zoom.jpg},
   abstract={This paper introduces TurboFill, a fast image inpainting model that enhances a few-step text-to-image diffusion model with an inpainting adapter for high-quality and efficient inpainting. While standard diffusion models generate high-quality results, they incur high computational costs. We overcome this by training an inpainting adapter on a few-step distilled text-to-image model, DMD2, using a novel 3-step adversarial training scheme to ensure realistic, structurally consistent, and visually harmonious inpainted regions. To evaluate TurboFill, we propose two benchmarks: DilationBench, which tests performance across mask sizes, and HumanBench, based on human feedback for complex prompts. Experiments show that TurboFill outperforms both multi-step BrushNet and few-step inpainting methods, setting a new benchmark for high-performance inpainting tasks.}
 }
 
@@ -104,13 +109,16 @@
   year={2025},
   arxiv={2412.02635},
   preview={metashadow.jpg},
+  preview_zoom={metashadow_zoom.jpg},
   abstract={Shadows are often under-considered or even ignored in image editing applications, limiting the realism of the edited results. In this paper, we introduce MetaShadow, a three-in-one versatile framework that enables detection, removal, and controllable synthesis of shadows in natural images in an object-centered fashion. MetaShadow combines the strengths of two cooperative components: Shadow Analyzer, for object-centered shadow detection and removal, and Shadow Synthesizer, for reference-based controllable shadow synthesis. Notably, we optimize the learning of the intermediate features from Shadow Analyzer to guide Shadow Synthesizer to generate more realistic shadows that blend seamlessly with the scene. Extensive evaluations on multiple shadow benchmark datasets show significant improvements of MetaShadow over the existing state-of-the-art methods on object-centered shadow detection, removal, and synthesis.}
 }
 
 @article{yu2025zipir,
   preview={zipir.jpg},
+  preview_zoom={zipir_zoom.jpg},
   abbr={arXiv},
   bibtex_show={true},
+  selected={true},
   title={ZipIR: Latent Pyramid Diffusion Transformer for High-Resolution Image Restoration},
   author={Y. Yu and H. Zheng and Z. Zhang and J. Zhang and Y. Zhou and C. Barnes and Y. Liu and W. Xiong and Z. Lin and J. Luo},
   journal={arXiv preprint arXiv:2504.08591},
@@ -134,6 +142,7 @@
 
 @article{zheng2024structure,
   preview={structure.jpg},
+  preview_zoom={structure_zoom.jpg},
   abbr={TPAMI},
   bibtex_show={true},
   selected={true},
@@ -147,6 +156,7 @@
 
 @inproceedings{zhao2023pointcloud,
   preview={pointcloud.jpg},
+  preview_zoom={pointcloud_zoom.jpg},
   abbr={ICIP},
   bibtex_show={true},
   title={Point Cloud Denoising via Momentum Ascent in Gradient Fields},
@@ -159,6 +169,7 @@
 
 @inproceedings{zhao2023videocolor,
   preview={videocolor.jpg},
+  preview_zoom={videocolor_zoom.jpg},
   abbr={ICIP},
   bibtex_show={true},
   title={Improving Video Colorization by Test-Time Tuning},
@@ -172,8 +183,10 @@
 
 @inproceedings{martin2023jurassic,
   preview={jurassic.jpg},
+  preview_zoom={jurassic_zoom.jpg},
   abbr={ACM MM},
   bibtex_show={true},
+  selected={true},
   title={Jurassic World Remake: Bringing Ancient Fossils Back to Life via Zero-Shot Long Image-to-Image Translation},
   author={A. Martin and H. Zheng and J. An and J. Luo},
   booktitle={ACM International Conference on Multimedia (ACM MM)},
@@ -194,6 +207,7 @@
   arxiv={2203.11947},
   code={https://github.com/htzheng/CM-GAN-Inpainting},
   preview={cmgan.jpg},
+  preview_zoom={cmgan_zoom.jpg},
   abstract={Recent image inpainting methods have made great progress but often struggle to generate plausible image structures when dealing with large holes in complex images. This is partially due to the lack of effective network structures that can capture both the long-range dependency and high-level semantics of an image. We propose cascaded modulation GAN (CM-GAN), a new network design consisting of an encoder with Fourier convolution blocks that extract multi-scale feature representations from the input image with holes and a dual-stream decoder with a novel cascaded global-spatial modulation block at each scale level. In each decoder block, global modulation is first applied to perform coarse and semantic-aware structure synthesis, followed by spatial modulation to further adjust the feature map in a spatially adaptive fashion. In addition, we design an object-aware training scheme to prevent the network from hallucinating new objects inside holes, fulfilling the needs of object removal tasks in real-world scenarios.}
 }
 
@@ -207,6 +221,7 @@
   year={2022},
   arxiv={2012.07288},
   preview={semlayout.jpg},
+  preview_zoom={semlayout_zoom.jpg},
   abstract={We tackle the problem of semantic image layout manipulation, which aims to manipulate an input image by editing its semantic label map. A core problem of this task is how to transfer visual details from the input images to the new semantic layout while making the resulting image visually realistic. Recent work on learning cross-domain correspondence has shown promising results for global layout transfer with dense attention-based warping. However, this method tends to lose texture details due to the resolution limitation and the lack of smoothness constraint of correspondence. To adapt this paradigm for the layout manipulation task, we propose a high-resolution sparse attention module that effectively transfers visual details to new layouts at a resolution up to 512x512. To further improve visual quality, we introduce a novel generator architecture consisting of a semantic encoder and a two-stage decoder for coarse-to-fine synthesis.}
 }
 
@@ -239,6 +254,7 @@
 
 @inproceedings{zhu2022noisylabels,
   preview={noisylabels.jpg},
+  preview_zoom={noisylabels_zoom.jpg},
   abbr={ICPR},
   bibtex_show={true},
   title={Learning to Aggregate and Refine Noisy Labels for Visual Sentiment Analysis},
@@ -252,6 +268,7 @@
 
 @inproceedings{zhao2022crosscamera,
   preview={crosscamera.jpg},
+  preview_zoom={crosscamera_zoom.jpg},
   abbr={CICAI},
   bibtex_show={true},
   title={Cross-Camera Deep Colorization},
@@ -292,6 +309,7 @@
 
 @inproceedings{zheng2020exampleguided,
   preview={exampleguided.jpg},
+  preview_zoom={exampleguided_zoom.jpg},
   abbr={ECCV},
   bibtex_show={true},
   selected={true},
@@ -317,11 +335,13 @@
   year={2020},
   arxiv={1909.13819},
   code={https://github.com/htzheng/TIP2020-Pose-Flow-Learning-for-Pose-Guided-Synthesis},
-  preview={poseflow.jpg},
+  preview={poseflow.gif},
   abstract={Pose guided synthesis aims to generate a new image in an arbitrary target pose while preserving the appearance details from the source image. Existing approaches rely on either hard-coded spatial transformations or 3D body modeling. They often overlook complex non-rigid pose deformation or unmatched occluded regions, thus fail to effectively preserve appearance information. In this paper, we propose an unsupervised pose flow learning scheme that learns to transfer the appearance details from the source image. Based on such learned pose flow, we proposed GarmentNet and SynthesisNet, both of which use multi-scale feature-domain alignment for coarse-to-fine synthesis.}
 }
 
 @article{tan2020crossnetpp,
+  preview={crossnetpp.jpg},
+  preview_zoom={crossnetpp_zoom.jpg},
   abbr={TPAMI},
   bibtex_show={true},
   selected={true},
@@ -365,8 +385,10 @@
 
 @inproceedings{zheng2018crossnet,
   preview={crossnet.jpg},
+  preview_zoom={crossnet_zoom.jpg},
   abbr={ECCV},
   bibtex_show={true},
+  selected={true},
   title={CrossNet: An End-to-end Reference-based Super Resolution Network using Cross-scale Warping},
   author={H. Zheng and M. Ji and H. Wang and Y. Liu and L. Fang},
   booktitle={European Conference on Computer Vision (ECCV)},
@@ -378,8 +400,11 @@
 }
 
 @inproceedings{zheng2017crossscale,
+  preview={crossscale.jpg},
+  preview_zoom={crossscale_zoom.jpg},
   abbr={BMVC},
   bibtex_show={true},
+  selected={true},
   title={Learning Cross-scale Correspondence and Patch-based Synthesis for Reference-based Super-Resolution},
   author={H. Zheng and M. Ji and Z. Xu and H. Wang and Y. Liu and L. Fang},
   booktitle={British Machine Vision Conference (BMVC)},
@@ -405,6 +430,7 @@
 
 @inproceedings{zheng2017lightfield,
   preview={lightfield.jpg},
+  preview_zoom={lightfield_zoom.jpg},
   abbr={ICCVW},
   bibtex_show={true},
   title={Combining Exemplar-based Approach and Learning-based Approach for Light Field Super-resolution Using a Hybrid Imaging System},
@@ -418,6 +444,7 @@
 
 @inproceedings{xu2017indoor,
   preview={indoor.jpg},
+  preview_zoom={indoor_zoom.jpg},
   abbr={GlobalSIP},
   bibtex_show={true},
   title={Utilizing High-level Visual Feature for Indoor Shopping Mall Navigation},
@@ -432,8 +459,10 @@
 
 @article{zheng2016haptic,
   preview={haptic.jpg},
+  preview_zoom={haptic_zoom.jpg},
   abbr={TMM},
   bibtex_show={true},
+  selected={true},
   title={Deep Learning for Surface Material Classification Using Haptic and Visual Information},
   author={H. Zheng and L. Fang and M. Ji and M. Strese and Y. Oezer and E. Steinbach},
   journal={IEEE Transactions on Multimedia (TMM)},
@@ -447,6 +476,7 @@
 
 @article{zhou2016segmentation,
   preview={segmentation.jpg},
+  preview_zoom={segmentation_zoom.jpg},
   abbr={TCSVT},
   bibtex_show={true},
   title={Computation and Memory Efficient Image Segmentation},
@@ -462,6 +492,7 @@
 
 @inproceedings{zheng2015sports,
   preview={sports.jpg},
+  preview_zoom={sports_zoom.jpg},
   abbr={APSIPA},
   bibtex_show={true},
   title={Analysis of Sports Statistics via Graph-Signal Smoothness Prior},
