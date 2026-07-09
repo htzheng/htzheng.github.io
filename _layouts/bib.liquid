@@ -35,7 +35,12 @@
             {% assign zoom_path = entry.preview_zoom | prepend: '/assets/img/publication_preview/' %}
             <span class="preview-zoomable">
               <a href="{{ zoom_path | relative_url }}" data-lightbox="{{ entry.key }}" data-title="{{ entry.title | escape }}">
-                <img class="preview z-depth-1 rounded" style="width: 100%; height: auto;" src="{{ thumb_path | relative_url }}" alt="{{ entry.title }}">
+                <img
+                  class="preview z-depth-1 rounded"
+                  style="width: 100%; height: auto;"
+                  src="{{ thumb_path | relative_url }}"
+                  alt="{{ entry.title }}"
+                >
               </a>
               <span class="preview-zoomable__cue"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
             </span>
