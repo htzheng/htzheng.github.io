@@ -13,5 +13,6 @@ vendor
 .idea
 .venv
 publication_pdfs/
-TODO.md
 .claude/settings.local.json
+private
+private/*
