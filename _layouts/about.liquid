@@ -62,7 +62,7 @@ layout: default
       <h2 class="section-heading">
         <a href="{{ '/shipped/' | relative_url }}" style="color: inherit">SHIPPED FEATURES</a>
       </h2>
-      {% include shipped_features.liquid %}
+      {% include shipped_features.liquid research=true %}
       {% if page.selected_papers %}
         <hr style="height: 3px; border: 0; background-color: var(--global-divider-color); margin: 3.5rem 0 3rem;">
       {% endif %}
