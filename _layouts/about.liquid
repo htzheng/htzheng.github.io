@@ -42,10 +42,10 @@ layout: default
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
-      {% include news.liquid limit=true %}
+      <section aria-labelledby="news-heading">
+        <h2 class="section-heading" id="news-heading">NEWS</h2>
+        {% include news.liquid limit=true %}
+      </section>
     {% endif %}
 
     <!-- Latest posts -->

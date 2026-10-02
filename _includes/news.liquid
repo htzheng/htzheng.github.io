@@ -2,31 +2,48 @@
   {% if site.news != blank %}
     {% assign news_size = site.news | size %}
     <div
-      class="table-responsive"
+      class="news-list"
       {% if include.limit and page.announcements.scrollable and news_size > 3 %}
         style="max-height: 60vw"
       {% endif %}
     >
-      <table class="table table-sm table-borderless">
-        {% assign news = site.news | reverse %}
-        {% if include.limit and page.announcements.limit %}
-          {% assign news_limit = page.announcements.limit %}
-        {% else %}
-          {% assign news_limit = news_size %}
-        {% endif %}
-        {% for item in news limit: news_limit %}
-          <tr>
-            <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
-            <td>
-              {% if item.inline %}
-                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
-              {% else %}
+      {% assign news = site.news | reverse %}
+      {% if include.limit and page.announcements.limit %}
+        {% assign news_limit = page.announcements.limit %}
+      {% else %}
+        {% assign news_limit = news_size %}
+      {% endif %}
+      {% for item in news limit: news_limit %}
+        <article class="news-item">
+          <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%b %d, %Y' }}</time>
+          <div class="news-content">
+            {% if item.inline %}
+              {{ item.content | emojify }}
+            {% else %}
+              <p>
                 <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
-              {% endif %}
-            </td>
-          </tr>
-        {% endfor %}
-      </table>
+              </p>
+            {% endif %}
+            {% if item.image %}
+              <figure class="news-demo">
+                <a href="{{ item.image | relative_url }}" aria-label="View {{ item.title | escape }} demo at full size">
+                  <img
+                    src="{{ item.image | relative_url }}"
+                    alt="{{ item.image_alt | escape }}"
+                    width="{{ item.image_width }}"
+                    height="{{ item.image_height }}"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </a>
+                {% if item.image_caption %}
+                  <figcaption>{{ item.image_caption }}</figcaption>
+                {% endif %}
+              </figure>
+            {% endif %}
+          </div>
+        </article>
+      {% endfor %}
     </div>
   {% else %}
     <p>No news so far...</p>

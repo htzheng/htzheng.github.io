@@ -1,18 +1,54 @@
 ---
 ---
 
-@article{zhou2026triprompting,
+@inproceedings{ren2026ultradiff,
+  preview={ultradiff-figure2.png},
+  preview_zoom={ultradiff-figure2.png},
+  preview_alt={Figure 2: GenEval scores during training, showing the effectiveness of cross-space knowledge transfer in UltraDiff.},
+  abbr={NeurIPS},
+  bibtex_show={true},
+  selected={true},
+  title={UltraDiff: Transferring High-Fidelity Priors to Compressed Latent Spaces for High-resolution Image Generation},
+  author={J. Ren* and H. Zheng* and H. Chen and C. Barnes and Z. Zhang and Y. Zhou and Z. Lin and L. Zhu},
+  annotation={J. Ren and H. Zheng contributed equally.},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+  year={2026},
+  note={Spotlight},
+  acceptance_rate={0.95%},
+  abstract={High-resolution synthesis with Latent Diffusion Models (LDMs) faces a fundamental trade-off between computational cost and generative fidelity. This trade-off is largely governed by the latent compression factor f (e.g. f8: f=8 and f32: f=32). While aggressive compression (f32) significantly improves efficiency, it suffers from severe information loss and ambiguity compared to standard f8 models. We propose UltraDiff, a framework that reformulates this challenge as joint-latent diffusion learning followed by marginal score distillation. We introduce MixTeacher, a dual-branch DiT that models the joint f8-f32 distribution, utilizing shared attention to resolve the ambiguity of the compressed space with high-fidelity f8 priors. Crucially, we propose vector field distillation in the native f32 space. Theoretically, this compels the student to learn the conditional expectation of the teacher's trajectory, effectively filtering out compression artifacts. UltraDiff matches f8 quality across 1K-4K resolutions while preserving f32 efficiency. Notably, it generates 2K images in 6.2 seconds on a single A100 GPU, over 40 times faster than f8 baselines.}
+}
+
+@inproceedings{yang2026pixeldense,
+  preview={pixeldense-figure4.jpg},
+  preview_zoom={pixeldense-figure4.jpg},
+  preview_crop_ratio={1073 / 698},
+  preview_position={left},
+  preview_alt={Figure 4, left panel: GT, PixelGen, and PixelDense geometry-preservation comparisons.},
+  abbr={NeurIPS},
+  bibtex_show={true},
+  title={PixelDense: Dense Prediction as Representation Alignment for Pixel Diffusion},
+  author={L. Yang and D. Qi and W. Zhang and A. Li and Y. Yang and Y. Li and Y. Kong and H. Zheng and Z. Zhang and Z. Lin and V. Jampani and S. Li},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+  year={2026},
+  arxiv={2610.00483},
+  website={https://bio.lehanyang.info/PixelDense/},
+  abstract={Representation alignment (REPA) accelerates diffusion transformer training, but its alignment targets are almost exclusively semantic encoders such as DINOv2 and CLIP. Recent analysis points to spatial structure, not global semantics, as the carrier of the alignment effect, yet dense-prediction foundation models trained to predict that structure remain overlooked as REPA targets. In pixel-space diffusion, SAM2, Depth Anything v2, and Metric3D v2 each outperform the DINOv2-only GenEval baseline, with the two geometric teachers leading the segmentation teacher. A flat sum of all four teachers, however, lands below the best single geometric teacher, semantic teachers reward viewpoint invariance and instance identity while geometric teachers reward metric layout and surface orientation, and forcing both kinds of gradients through one denoiser projection collapses them into a shared subspace. We introduce PixelDense, which routes DINOv2 and SAM2 through a semantic projection stream, routes Depth Anything v2 and Metric3D v2 through a geometric projection stream, and adds a weight-space orthogonality penalty that keeps the two streams in disjoint subspaces. All four teachers are frozen during training and dropped at inference. Applied to PixelGen and DeCo with a single recipe, PixelDense improves GenEval, DPG-Bench, and HPS v2.1, raises PixelGen-XXL's GenEval Overall from 0.7927 to 0.8093, and beats every single-teacher and unfactored multi-teacher variant. In partial-noise reconstruction, independent panoptic, depth, and surface-normal probes show up to 53.1% PQ gain and 36.0% depth AbsRel reduction at tau=0.5 across COCO and Flickr30K. From random initialization, PixelDense also reaches the baseline's peak GenEval 1.23 times faster.}
+}
+
+@inproceedings{zhou2026triprompting,
   preview={triprompting_thumb.gif},
   preview_zoom={triprompting.gif},
-  abbr={arXiv},
+  abbr={NeurIPS},
   bibtex_show={true},
-  title={Tri-Prompting: Video Diffusion with Unified Control over Scene, Subject, and Motion},
+  title={Tri-Prompting: Controllable Video Generation with Scene, Subject, and Motion Prompts},
   author={Z. Zhou and X. Zhan and Z. Chen and S. Y. Kim and N. Zhao and H. Zheng and Q. Liu and H. Zhang and Z. Lin and Y. Zhou and J. Luo},
-  journal={arXiv preprint arXiv:2603.15614},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
   year={2026},
   arxiv={2603.15614},
+  html={https://openreview.net/forum?id=Kutg1nC7K3},
+  pdf={https://openreview.net/pdf?id=Kutg1nC7K3},
   website={https://zhouzhenghong-gt.github.io/Tri-Prompting-Page/},
-  abstract={Recent video diffusion models have made remarkable strides in visual quality, yet precise, fine-grained control remains a key bottleneck that limits practical customizability for content creation. For AI video creators, three forms of control are crucial: (i) scene composition, (ii) multi-view consistent subject customization, and (iii) camera-pose or object-motion adjustment. Existing methods typically handle these dimensions in isolation, with limited support for multi-view subject synthesis and identity preservation under arbitrary pose changes. This lack of a unified architecture makes it difficult to support versatile, jointly controllable video. We introduce Tri-Prompting, a unified framework and two-stage training paradigm that integrates scene composition, multi-view subject consistency, and motion control. Our approach leverages a dual-condition motion module driven by 3D tracking points for background scenes and downsampled RGB cues for foreground subjects. To ensure a balance between controllability and visual realism, we further propose an inference ControlNet scale schedule. Tri-Prompting supports novel workflows, including 3D-aware subject insertion into any scenes and manipulation of existing subjects in an image. Experimental results demonstrate that Tri-Prompting significantly outperforms specialized baselines such as Phantom and DaS in multi-view subject identity, 3D consistency, and motion accuracy.}
+  abstract={Recent video diffusion models achieve strong visual quality and temporal coherence, but still lack coordinated control over scene layout, customized subject identity, and camera/subject motion. We study controllable video generation from three prompts: a first-frame scene image, 3D-aware multi-view subject references, and a motion-driving signal. This setting is challenging because background regions are often trackable under camera motion, while foreground subjects can rotate, self-occlude, and reveal new regions that require identity-consistent appearance. We introduce Tri-Prompting, a video diffusion framework that combines multi-view subject conditioning with dual-conditioned motion control. Tri-Prompting uses XYZ tracking points for visible background motion and low-resolution RGB proxies for foreground subject pose, allowing the model to recover fine appearance from multi-view references while retaining flexibility for plausible subject-scene interactions. An inference-time ControlNet scale schedule further balances motion controllability and visual realism. We evaluate Tri-Prompting against specialized baselines: DaS for motion reconstruction and Phantom for subject-driven generation. Tri-Prompting achieves competitive or improved reconstruction quality, stronger multi-view identity preservation, and better 3D consistency, while enabling 3D-aware subject insertion and in-scene manipulation.}
 }
 
 @inproceedings{wang2026hbridge,
@@ -35,7 +71,7 @@
   title={RealUHR: Harnessing Patch-Cascade Flows for Photorealistic Ultra-High-Resolution Synthesis},
   author={Y. Yu and H. Zheng and Z. Lin and C. Barnes and Y. Zhou and J. Luo},
   booktitle={Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)},
-  year={2025},
+  year={2026},
   html={https://ojs.aaai.org/index.php/AAAI/article/view/38211},
   pdf={https://ojs.aaai.org/index.php/AAAI/article/download/38211/42173},
   preview={realuhr.jpg},

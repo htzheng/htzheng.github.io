@@ -299,6 +299,7 @@ enable_publication_badges:
 filtered_bibtex_keywords:
   [
     abbr,
+    acceptance_rate,
     abstract,
     additional_info,
     altmetric,
@@ -319,6 +320,9 @@ filtered_bibtex_keywords:
     pmid,
     poster,
     preview,
+    preview_alt,
+    preview_crop_ratio,
+    preview_position,
     selected,
     slides,
     supp,

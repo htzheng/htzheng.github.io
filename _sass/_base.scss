@@ -717,6 +717,24 @@ footer.sticky-bottom {
 .publications {
   margin-top: 2rem;
 
+  .venue-label {
+    font-style: normal;
+  }
+
+  .venue-abbr {
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .publication-spotlight {
+    color: $red-color-dark;
+    font-weight: 700;
+
+    html[data-theme="dark"] & {
+      color: #ff8a80;
+    }
+  }
+
   h1 {
     color: var(--global-theme-color);
     font-size: 2rem;

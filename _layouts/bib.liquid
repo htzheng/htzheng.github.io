@@ -37,9 +37,9 @@
               <a href="{{ zoom_path | relative_url }}" data-lightbox="{{ entry.key }}" data-title="{{ entry.title | escape }}">
                 <img
                   class="preview z-depth-1 rounded"
-                  style="width: 100%; height: auto;"
+                  style="width: 100%; height: auto;{% if entry.preview_crop_ratio %} aspect-ratio: {{ entry.preview_crop_ratio }}; object-fit: cover; object-position: {{ entry.preview_position | default: 'center' }};{% endif %}"
                   src="{{ thumb_path | relative_url }}"
-                  alt="{{ entry.title }}"
+                  alt="{{ entry.preview_alt | default: entry.title | escape }}"
                 >
               </a>
               <span class="preview-zoomable__cue"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
@@ -179,6 +179,16 @@
     {% else %}
       {% capture entrytype %}{% endcapture %}
     {% endif %}
+    {% if entry.abbr and entry.abbr != 'arXiv' %}
+      {% capture venue_abbr %}<strong class="venue-abbr">{{ entry.abbr }}</strong>{% endcapture %}
+      {% assign parenthesized_abbr = entry.abbr | prepend: '(' | append: ')' %}
+      {% if entrytype contains parenthesized_abbr %}
+        {% capture venue_abbr %}<span class="venue-label">({{ venue_abbr }})</span>{% endcapture %}
+        {% assign entrytype = entrytype | replace: parenthesized_abbr, venue_abbr %}
+      {% else %}
+        {% assign entrytype = entrytype | replace: entry.abbr, venue_abbr %}
+      {% endif %}
+    {% endif %}
     {% assign entrymonth = '' %}
     {% if entry.month %}
       {% capture entrymonth %}{{ " " }}{{ entry.month | capitalize }}{% endcapture %}
@@ -203,7 +213,15 @@
       {{ periodical | strip }}
     </div>
     <div class="periodical">
-      {{ entry.note | strip }}
+      {% assign note_type = entry.note | strip | downcase %}
+      {% if note_type == 'spotlight' %}
+        <strong class="publication-spotlight">
+          {{- entry.note | strip -}}
+          {%- if entry.acceptance_rate %} (acceptance rate: {{ entry.acceptance_rate }}){% endif -%}
+        </strong>
+      {% else %}
+        {{ entry.note | strip }}
+      {% endif %}
     </div>
 
     <!-- Links/Buttons -->
@@ -220,7 +238,7 @@
         <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
       {% endif %}
       {% if entry.arxiv %}
-        <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
+        <a href="https://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
       {% endif %}
       {% if entry.hal %}
         <a href="https://hal.science/{{ entry.hal }}" class="btn btn-sm z-depth-0" role="button">HAL</a>

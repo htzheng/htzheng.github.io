@@ -79,6 +79,75 @@ hr + .section-heading {
   margin-top: 0.5rem;
 }
 
+/* ---- News ---- */
+#news-heading {
+  margin-bottom: 0.9rem;
+}
+
+.news {
+  .news-list {
+    overflow-y: auto;
+  }
+
+  .news-item {
+    display: grid;
+    grid-template-columns: 7.5rem minmax(0, 1fr);
+    gap: 1rem;
+
+    + .news-item {
+      margin-top: 0.8rem;
+      padding-top: 0.8rem;
+      border-top: 1px solid var(--global-divider-color);
+    }
+  }
+
+  time {
+    padding-top: 0.05rem;
+    color: var(--global-text-color-light);
+    font-size: 0.9rem;
+  }
+
+  .news-content > p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .news-demo {
+    max-width: 480px;
+    margin: 0;
+
+    a {
+      display: block;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--global-divider-color);
+      border-radius: 4px;
+    }
+
+    figcaption {
+      margin-top: 0.45rem;
+      color: var(--global-text-color-light);
+      font-size: 0.85rem;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    .news-item {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0.2rem;
+    }
+  }
+}
+
 /* ---- Shipped-features cards ---- */
 .shipped-features {
   &.row {

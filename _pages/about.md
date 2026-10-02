@@ -19,7 +19,7 @@ images:
   lightbox2: true # for selected papers whose thumbnail defines a separate `preview_zoom` (opened at natural aspect on click)
 
 announcements:
-  enabled: false # includes a list of news items
+  enabled: true # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
