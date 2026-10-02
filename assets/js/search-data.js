@@ -37,7 +37,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{
+        },{id: "news-three-of-our-papers-have-been-accepted-to-neurips-2026-ultradiff-spotlight-acceptance-rate-0-95-pixeldense-and-tri-prompting",
+          title: 'Three of our papers have been accepted to NeurIPS 2026: UltraDiff (Spotlight, acceptance...',
+          description: "",
+          section: "News",},{id: "news-our-zipir-powered-firefly-upscaler-2-is-now-in-photoshop-beta-with-6x-8x-upscaling-up-to-67-mp-8192-x-8192-preserving-image-structure-while-enhancing-fine-details",
+          title: 'Our ZipIR-powered Firefly Upscaler 2 is now in Photoshop Beta, with 6x/8x upscaling...',
+          description: "",
+          section: "News",},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
