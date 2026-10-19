@@ -15,6 +15,7 @@
   year={2026},
   note={Spotlight},
   acceptance_rate={0.95%},
+  arxiv={2610.21202},
   abstract={High-resolution synthesis with Latent Diffusion Models (LDMs) faces a fundamental trade-off between computational cost and generative fidelity. This trade-off is largely governed by the latent compression factor f (e.g. f8: f=8 and f32: f=32). While aggressive compression (f32) significantly improves efficiency, it suffers from severe information loss and ambiguity compared to standard f8 models. We propose UltraDiff, a framework that reformulates this challenge as joint-latent diffusion learning followed by marginal score distillation. We introduce MixTeacher, a dual-branch DiT that models the joint f8-f32 distribution, utilizing shared attention to resolve the ambiguity of the compressed space with high-fidelity f8 priors. Crucially, we propose vector field distillation in the native f32 space. Theoretically, this compels the student to learn the conditional expectation of the teacher's trajectory, effectively filtering out compression artifacts. UltraDiff matches f8 quality across 1K-4K resolutions while preserving f32 efficiency. Notably, it generates 2K images in 6.2 seconds on a single A100 GPU, over 40 times faster than f8 baselines.}
 }
 
